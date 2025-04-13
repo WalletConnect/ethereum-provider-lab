@@ -140,7 +140,7 @@ export function useWalletConnect() {
     } finally {
         setIsLoading(false);
     }
-  }, [provider, isConnected, isLoading]);
+  }, [isConnected, isLoading]);
 
   const disconnectWallet = useCallback(async () => {
     if (!provider || !isConnected) return;
@@ -151,7 +151,7 @@ export function useWalletConnect() {
       console.error("Failed to disconnect wallet:", error);
       // Handle disconnection error
     }
-  }, [provider, isConnected]);
+  }, [isConnected]);
 
   const signMessage = useCallback(async (message: string): Promise<string | null> => {
     if (!provider || !account) {
@@ -169,7 +169,7 @@ export function useWalletConnect() {
       console.error("Failed to sign message:", error);
       return null; // Indicate failure
     }
-  }, [provider, account]);
+  }, [account]);
 
   return {
     account,

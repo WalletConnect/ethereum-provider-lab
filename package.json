@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@walletconnect/ethereum-provider": "2.19.0-canary-ak-4",
+    "@walletconnect/ethereum-provider": "2.19.4-canary-ak-1",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
